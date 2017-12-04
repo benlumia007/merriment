@@ -19,16 +19,16 @@ perform their jobs.
 ?>
 <?php get_header(); ?>
     <section id="site-main" class="site-main">
-        <div id="global-layout" class="<?php echo esc_attr(get_theme_mod('global_layout', 'no-sidebar')); ?>">
+        <div id="page-layout" class="<?php echo esc_attr(get_theme_mod('page_layout', 'no-sidebar')); ?>">
             <div id="content-area" class="content-area">
                 <?php while (have_posts()) : the_post(); ?>
                     <?php get_template_part('template-parts/content', 'page'); ?>
                 <?php endwhile; ?>
                 <?php comments_template(); ?>
             </div>
-            <?php if ('left-sidebar' == get_theme_mod('global_layout')) { ?>
+            <?php if ('left-sidebar' == get_theme_mod('page_layout')) { ?>
                 <?php get_sidebar('page'); ?>
-            <?php } else if ('right-sidebar' == get_theme_mod('global_layout')) { ?>
+            <?php } else if ('right-sidebar' == get_theme_mod('page_layout')) { ?>
                 <?php get_sidebar('page'); ?>
             <?php } ?>
         </div>

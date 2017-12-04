@@ -80,7 +80,7 @@ function merriment_control_radio_image_layout_setup($wp_customize) {
     
     /*
     ============================================================================================
-    Enable and activate General Layouts for Camaraderie. The General Layout should only be used
+    Enable and activate General Layouts for Merriment. The General Layout should only be used
     under Posts, Pages, and Archives.
     ============================================================================================
     */    
@@ -112,7 +112,39 @@ function merriment_control_radio_image_layout_setup($wp_customize) {
     
     /*
     ============================================================================================
-    Enable and activate Custom Layout for Camaraderie. The Custom Layout should only be used
+    Enable and activate Custom Layout for Merriment. The Custom Layout should only be used
+    under Custom Templates that is registered as part of the theme.
+    ============================================================================================
+    */
+    $wp_customize->add_section('page_layout', array(
+        'title'     => esc_html__('Page Layout', 'merriment'),
+        'panel'     => 'general_layouts',
+        'priority'  => 5,
+    ));
+    
+    $wp_customize->add_setting('page_layout', array(
+        'default'           => 'no-sidebar',
+        'sanitize_callback' => 'merriment_sanitize_layout',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod',
+    ));
+    
+    $wp_customize->add_control(new Merriment_Control_Radio_Image($wp_customize, 'page_layout', array(
+        'label'     => __('Page Layout', 'merriment'),
+        'description'   => __('Page Layout applies to all layouts that supports in this theme.', 'merriment'),
+        'section'   => 'page_layout',
+        'settings'  => 'page_layout',
+        'type'      => 'radio-image',
+        'choices'  => array(
+			'no-sidebar'    => trailingslashit( get_template_directory_uri() ) . 'images/1col.png',
+			'left-sidebar'  => trailingslashit( get_template_directory_uri() ) . 'images/2cl.png',
+			'right-sidebar' => trailingslashit( get_template_directory_uri() ) . 'images/2cr.png',
+        ),
+    )));
+    
+    /*
+    ============================================================================================
+    Enable and activate Custom Layout for Merriment. The Custom Layout should only be used
     under Custom Templates that is registered as part of the theme.
     ============================================================================================
     */
@@ -124,7 +156,7 @@ function merriment_control_radio_image_layout_setup($wp_customize) {
     
     $wp_customize->add_setting('custom_layout', array(
         'default'           => 'no-sidebar',
-        'sanitize_callback' => 'camaraderie_sanitize_layout',
+        'sanitize_callback' => 'merriment_sanitize_layout',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
     ));

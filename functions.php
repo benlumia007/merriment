@@ -216,14 +216,46 @@ add_action( 'after_setup_theme', 'merriment_content_width_setup', 0 );
 function merriment_register_sidebars_setup() {
     /*
     ============================================================================================
-    Enable and activate Primary Sidebar for Camaraderie WordPress Theme. The Primary Sidebar
+    Enable and activate Primary Sidebar for Merriment WordPress Theme. The Primary Sidebar
     should only show in the blog posts only rather in the pages. 
     ============================================================================================
     */
     register_sidebar(array(
-        'name'          => __('Blog Sidebar', 'camaraderie'),
-        'description'   => __('Add widgets here to appear in your sidebar on Blog Posts and Archives only', 'camaraderie'),
-        'id'            => 'blog-sidebar',
+        'name'          => __('Primary Sidebar', 'merriment'),
+        'description'   => __('Add widgets here to appear in your sidebar on Blog Posts and Archives only', 'merriment'),
+        'id'            => 'primary-sidebar',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
+    
+    /*
+    ============================================================================================
+    Enable and activate Pages Sidebar for Merriment WordPress Theme. The Primary Sidebar
+    should only show in the blog posts only rather in the pages. 
+    ============================================================================================
+    */
+    register_sidebar(array(
+        'name'          => __('Secondary Sidebar', 'merriment'),
+        'description'   => __('Add widgets here to appear in your sidebar on Pages Posts and Archives only', 'merriment'),
+        'id'            => 'secondary-sidebar',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
+    
+    /*
+    ============================================================================================
+    Enable and activate Pages Sidebar for Merriment WordPress Theme. The Primary Sidebar
+    should only show in the blog posts only rather in the pages. 
+    ============================================================================================
+    */
+    register_sidebar(array(
+        'name'          => __('Custom Sidebar', 'merriment'),
+        'description'   => __('Add widgets here to appear in your sidebar on Pages Posts and Archives only', 'merriment'),
+        'id'            => 'custom-sidebar',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget'  => '</aside>',
         'before_title'  => '<h2 class="widget-title">',
