@@ -27,8 +27,8 @@ perform their jobs.
                 <?php endwhile; ?>
                 <?php 
                     the_post_navigation(array(
-                        'next_text' => '<span class="post-next" aria-hiddent="true">' . __('Next', 'camaraderie') . '</span>' . '<span class="post-title">%title</span>',
-                        'prev_text' => '<span class="post-previous" aria-hidden="true">' . __( 'Previous', 'camaraderie' ) . '</span> ' . '<span class="post-title">%title</span>',
+                        'next_text' => '<span class="post-next" aria-hiddent="true">' . __('Next', 'merriment') . '</span>' . '<span class="post-title">%title</span>',
+                        'prev_text' => '<span class="post-previous" aria-hidden="true">' . __( 'Previous', 'merriment' ) . '</span> ' . '<span class="post-title">%title</span>',
                     ));
                 ?>
                 <?php comments_template(); ?>
