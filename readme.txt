@@ -4,7 +4,7 @@ Contributor: benlumia007
 Tags: custom-background, custom-header, left-sidebar, right-sidebar
 Requres at least: 4.5
 Tested up to: 4.8.3
-Stable tag: 0.0.7
+Stable tag: 0.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,19 +40,6 @@ Customizer
    - Front Page
    - Blog
    
-
-Jetpack Plugin (Required for Portfolio to work)
-================================================================================================
-This theme uses WordPress: Jetpack Plugin and must be enabled to use Content Post Type for the
-Portfolio section for this theme. To use this Portfolio, you can enable the feature in the settings
-Writing and enable Portfolio. This will then will give you Portfolio section on the dashboard
-for you to be able to add new Portfolio. 
-
-This theme uses WordPress: Jetpack Testimonial and must be enabled to use Content Post type for the
-Testimonial section for this theme. To use this Testimonial, you can enable the feature in the 
-settings Writing and enable Testimonial. This will then will give you Testimonl section on the
-dashboard for you to add new Testimonials.
-
 Description
 ================================================================================================
 Merriment is a fully functional mobile friendly WordPress theme that allows you to create amazing 
@@ -68,6 +55,12 @@ Not Available.
 
 Changelog
 ================================================================================================
+Version: 0.0.3
+- Minor CSS Change and New Screenshot
+
+Version: 0.0.2
+- Minor CSS Change
+
 Version: 0.0.1
 - Initial Release
 
