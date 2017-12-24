@@ -7,7 +7,7 @@ Description: Merriment was created to be a celebration of Christmas. Merriment i
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-header, theme-options, threaded-comments, translation-ready, blog, holiday
-Version: 0.0.2
+Version: 0.0.3
 Text Domain: merriment
 
 This theme, like WordPress, is licensed under the GPL.
@@ -244,8 +244,8 @@ input[type="submit"]:hover {
     border: 0.063em solid #999999;
     border-radius: 0.5em;
     box-shadow: 0 0 0.5em 0;
-    margin: 1.125em auto;
-    max-width: 75.375em;
+    margin: 2em auto;
+    max-width: 70.875em;
     padding: 0.563em;
 }
 
