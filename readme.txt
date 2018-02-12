@@ -55,6 +55,9 @@ Not Available.
 
 Changelog
 ================================================================================================
+Version: 0.0.4
+- Changed URIs
+
 Version: 0.0.3
 - Minor CSS Change and New Screenshot
 
